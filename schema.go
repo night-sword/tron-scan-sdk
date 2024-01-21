@@ -16,17 +16,17 @@ type GetAccountResponse struct {
 	RedTag          string `json:"redTag"`
 	PublicTag       string `json:"publicTag"`
 	WithPriceTokens []struct {
-		Amount          string `json:"amount"`
-		TokenPriceInTrx int32  `json:"tokenPriceInTrx"`
-		TokenId         string `json:"tokenId"`
-		Balance         string `json:"balance"`
-		TokenName       string `json:"tokenName"`
-		TokenDecimal    int32  `json:"tokenDecimal"`
-		TokenAbbr       string `json:"tokenAbbr"`
-		TokenCanShow    int32  `json:"tokenCanShow"`
-		TokenType       string `json:"tokenType"`
-		Vip             bool   `json:"vip"`
-		TokenLogo       string `json:"tokenLogo"`
+		Amount          string  `json:"amount"`
+		TokenPriceInTrx float64 `json:"tokenPriceInTrx"`
+		TokenId         string  `json:"tokenId"`
+		Balance         string  `json:"balance"`
+		TokenName       string  `json:"tokenName"`
+		TokenDecimal    int32   `json:"tokenDecimal"`
+		TokenAbbr       string  `json:"tokenAbbr"`
+		TokenCanShow    int32   `json:"tokenCanShow"`
+		TokenType       string  `json:"tokenType"`
+		Vip             bool    `json:"vip"`
+		TokenLogo       string  `json:"tokenLogo"`
 	} `json:"withPriceTokens"`
 	DelegateFrozenForEnergy int32 `json:"delegateFrozenForEnergy"`
 	Balance                 int64 `json:"balance"`
