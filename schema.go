@@ -1,117 +1,117 @@
 package tronscan
 
 type GetAccountResponse struct {
-	TransactionsOut                    int    `json:"transactions_out"`
-	AcquiredDelegateFrozenForBandWidth int    `json:"acquiredDelegateFrozenForBandWidth"`
-	RewardNum                          int    `json:"rewardNum"`
+	TransactionsOut                    int32  `json:"transactions_out"`
+	AcquiredDelegateFrozenForBandWidth int32  `json:"acquiredDelegateFrozenForBandWidth"`
+	RewardNum                          int32  `json:"rewardNum"`
 	GreyTag                            string `json:"greyTag"`
 	OwnerPermission                    struct {
 		Keys []struct {
 			Address string `json:"address"`
-			Weight  int    `json:"weight"`
+			Weight  int32  `json:"weight"`
 		} `json:"keys"`
-		Threshold      int    `json:"threshold"`
+		Threshold      int32  `json:"threshold"`
 		PermissionName string `json:"permission_name"`
 	} `json:"ownerPermission"`
 	RedTag          string `json:"redTag"`
 	PublicTag       string `json:"publicTag"`
 	WithPriceTokens []struct {
 		Amount          string `json:"amount"`
-		TokenPriceInTrx int    `json:"tokenPriceInTrx"`
+		TokenPriceInTrx int32  `json:"tokenPriceInTrx"`
 		TokenId         string `json:"tokenId"`
 		Balance         string `json:"balance"`
 		TokenName       string `json:"tokenName"`
-		TokenDecimal    int    `json:"tokenDecimal"`
+		TokenDecimal    int32  `json:"tokenDecimal"`
 		TokenAbbr       string `json:"tokenAbbr"`
-		TokenCanShow    int    `json:"tokenCanShow"`
+		TokenCanShow    int32  `json:"tokenCanShow"`
 		TokenType       string `json:"tokenType"`
 		Vip             bool   `json:"vip"`
 		TokenLogo       string `json:"tokenLogo"`
 	} `json:"withPriceTokens"`
-	DelegateFrozenForEnergy int   `json:"delegateFrozenForEnergy"`
+	DelegateFrozenForEnergy int32 `json:"delegateFrozenForEnergy"`
 	Balance                 int64 `json:"balance"`
 	FeedbackRisk            bool  `json:"feedbackRisk"`
-	VoteTotal               int   `json:"voteTotal"`
-	TotalFrozen             int   `json:"totalFrozen"`
+	VoteTotal               int32 `json:"voteTotal"`
+	TotalFrozen             int32 `json:"totalFrozen"`
 	Delegated               struct {
 	} `json:"delegated"`
-	TransactionsIn        int   `json:"transactions_in"`
+	TransactionsIn        int32 `json:"transactions_in"`
 	LatestOperationTime   int64 `json:"latest_operation_time"`
-	TotalTransactionCount int   `json:"totalTransactionCount"`
+	TotalTransactionCount int32 `json:"totalTransactionCount"`
 	Representative        struct {
-		LastWithDrawTime int    `json:"lastWithDrawTime"`
-		Allowance        int    `json:"allowance"`
+		LastWithDrawTime int32  `json:"lastWithDrawTime"`
+		Allowance        int32  `json:"allowance"`
 		Enabled          bool   `json:"enabled"`
 		Url              string `json:"url"`
 	} `json:"representative"`
-	FrozenForBandWidth int           `json:"frozenForBandWidth"`
+	FrozenForBandWidth int32         `json:"frozenForBandWidth"`
 	Announcement       string        `json:"announcement"`
-	Reward             int           `json:"reward"`
+	Reward             int32         `json:"reward"`
 	AddressTagLogo     string        `json:"addressTagLogo"`
 	AllowExchange      []interface{} `json:"allowExchange"`
 	Address            string        `json:"address"`
 	FrozenSupply       []interface{} `json:"frozen_supply"`
 	Bandwidth          struct {
-		EnergyRemaining   int   `json:"energyRemaining"`
+		EnergyRemaining   int32 `json:"energyRemaining"`
 		TotalEnergyLimit  int64 `json:"totalEnergyLimit"`
 		TotalEnergyWeight int64 `json:"totalEnergyWeight"`
-		NetUsed           int   `json:"netUsed"`
-		StorageLimit      int   `json:"storageLimit"`
-		StoragePercentage int   `json:"storagePercentage"`
-		NetPercentage     int   `json:"netPercentage"`
-		StorageUsed       int   `json:"storageUsed"`
-		StorageRemaining  int   `json:"storageRemaining"`
-		FreeNetLimit      int   `json:"freeNetLimit"`
-		EnergyUsed        int   `json:"energyUsed"`
-		FreeNetRemaining  int   `json:"freeNetRemaining"`
-		NetLimit          int   `json:"netLimit"`
-		NetRemaining      int   `json:"netRemaining"`
-		EnergyLimit       int   `json:"energyLimit"`
-		FreeNetUsed       int   `json:"freeNetUsed"`
+		NetUsed           int32 `json:"netUsed"`
+		StorageLimit      int32 `json:"storageLimit"`
+		StoragePercentage int32 `json:"storagePercentage"`
+		NetPercentage     int32 `json:"netPercentage"`
+		StorageUsed       int32 `json:"storageUsed"`
+		StorageRemaining  int32 `json:"storageRemaining"`
+		FreeNetLimit      int32 `json:"freeNetLimit"`
+		EnergyUsed        int32 `json:"energyUsed"`
+		FreeNetRemaining  int32 `json:"freeNetRemaining"`
+		NetLimit          int32 `json:"netLimit"`
+		NetRemaining      int32 `json:"netRemaining"`
+		EnergyLimit       int32 `json:"energyLimit"`
+		FreeNetUsed       int32 `json:"freeNetUsed"`
 		TotalNetWeight    int64 `json:"totalNetWeight"`
-		FreeNetPercentage int   `json:"freeNetPercentage"`
-		EnergyPercentage  int   `json:"energyPercentage"`
+		FreeNetPercentage int32 `json:"freeNetPercentage"`
+		EnergyPercentage  int32 `json:"energyPercentage"`
 		TotalNetLimit     int64 `json:"totalNetLimit"`
 	} `json:"bandwidth"`
 	DateCreated int64         `json:"date_created"`
-	AccountType int           `json:"accountType"`
+	AccountType int32         `json:"accountType"`
 	Exchanges   []interface{} `json:"exchanges"`
 	Frozen      struct {
-		Total    int           `json:"total"`
+		Total    int32         `json:"total"`
 		Balances []interface{} `json:"balances"`
 	} `json:"frozen"`
 	AccountResource struct {
 		FrozenBalanceForEnergy struct {
 		} `json:"frozen_balance_for_energy"`
 	} `json:"accountResource"`
-	Transactions                    int    `json:"transactions"`
+	Transactions                    int32  `json:"transactions"`
 	BlueTag                         string `json:"blueTag"`
-	Witness                         int    `json:"witness"`
-	DelegateFrozenForBandWidth      int    `json:"delegateFrozenForBandWidth"`
+	Witness                         int32  `json:"witness"`
+	DelegateFrozenForBandWidth      int32  `json:"delegateFrozenForBandWidth"`
 	Name                            string `json:"name"`
-	FrozenForEnergy                 int    `json:"frozenForEnergy"`
+	FrozenForEnergy                 int32  `json:"frozenForEnergy"`
 	Activated                       bool   `json:"activated"`
-	AcquiredDelegateFrozenForEnergy int    `json:"acquiredDelegateFrozenForEnergy"`
+	AcquiredDelegateFrozenForEnergy int32  `json:"acquiredDelegateFrozenForEnergy"`
 	ActivePermissions               []struct {
 		Operations string `json:"operations"`
 		Keys       []struct {
 			Address string `json:"address"`
-			Weight  int    `json:"weight"`
+			Weight  int32  `json:"weight"`
 		} `json:"keys"`
-		Threshold      int    `json:"threshold"`
-		Id             int    `json:"id"`
+		Threshold      int32  `json:"threshold"`
+		Id             int32  `json:"id"`
 		Type           string `json:"type"`
 		PermissionName string `json:"permission_name"`
 	} `json:"activePermissions"`
 }
 
 type GetAccountAuthSecurityResponse struct {
-	ApproveProjectCount      int            `json:"approveProjectCount"`
-	ApproveTokenCount        int            `json:"approveTokenCount"`
-	ApproveAddressCount      int            `json:"approveAddressCount"`
-	ApproveRiskContractCount int            `json:"approveRiskContractCount"`
-	ApproveRiskAccountCount  int            `json:"approveRiskAccountCount"`
-	ApproveRiskAddressCount  int            `json:"approveRiskAddressCount"`
+	ApproveProjectCount      int32          `json:"approveProjectCount"`
+	ApproveTokenCount        int32          `json:"approveTokenCount"`
+	ApproveAddressCount      int32          `json:"approveAddressCount"`
+	ApproveRiskContractCount int32          `json:"approveRiskContractCount"`
+	ApproveRiskAccountCount  int32          `json:"approveRiskAccountCount"`
+	ApproveRiskAddressCount  int32          `json:"approveRiskAddressCount"`
 	RiskApprove              []*RiskApprove `json:"riskApprove"`
 }
 
@@ -125,8 +125,8 @@ type RiskApprove struct {
 		TokenId      string `json:"tokenId"`
 		TokenAbbr    string `json:"tokenAbbr"`
 		TokenName    string `json:"tokenName"`
-		TokenDecimal int    `json:"tokenDecimal"`
-		TokenCanShow int    `json:"tokenCanShow"`
+		TokenDecimal int32  `json:"tokenDecimal"`
+		TokenCanShow int32  `json:"tokenCanShow"`
 		TokenType    string `json:"tokenType"`
 		TokenLogo    string `json:"tokenLogo"`
 		TokenLevel   string `json:"tokenLevel"`
@@ -137,17 +137,17 @@ type RiskApprove struct {
 		Id string `json:"id"`
 	} `json:"project"`
 	ProjectId   string `json:"project_id"`
-	ProjectSort int    `json:"project_sort"`
+	ProjectSort int32  `json:"project_sort"`
 	OperateTime int64  `json:"operate_time"`
 }
 
 type ListTrc20TransfersWithStatusRequest struct {
-	Start     int    `json:"start"`                // start index，default is 0
-	Limit     int    `json:"limit"`                // number of transfers per page
+	Start     int32  `json:"start"`                // start index，default is 0
+	Limit     int32  `json:"limit"`                // number of transfers per page
 	Trc20Id   string `json:"trc20Id"`              // trc20 token address
 	Address   string `json:"address"`              // account address
-	Direction int    `json:"direction,omitempty"`  // transfer in or transfer out 0:all 1:transfer out 2:transfer in
-	DbVersion int    `json:"db_version,omitempty"` // return data is contains approval transfer or not. 1: contains, 0: do not contains
+	Direction int32  `json:"direction,omitempty"`  // transfer in or transfer out 0:all 1:transfer out 2:transfer in
+	DbVersion int32  `json:"db_version,omitempty"` // return data is contains approval transfer or not. 1: contains, 0: do not contains
 	Reverse   bool   `json:"reverse,omitempty"`    // sort by create time, value is true or false
 }
 
@@ -156,57 +156,57 @@ type ListTrc20TransfersWithStatusResponse struct {
 		TokenId      string `json:"tokenId"`
 		TokenAbbr    string `json:"tokenAbbr"`
 		TokenName    string `json:"tokenName"`
-		TokenDecimal int    `json:"tokenDecimal"`
-		TokenCanShow int    `json:"tokenCanShow"`
+		TokenDecimal int32  `json:"tokenDecimal"`
+		TokenCanShow int32  `json:"tokenCanShow"`
 		TokenType    string `json:"tokenType"`
 		TokenLogo    string `json:"tokenLogo"`
 		TokenLevel   string `json:"tokenLevel"`
 		IssuerAddr   string `json:"issuerAddr"`
 		Vip          bool   `json:"vip"`
 	} `json:"tokenInfo"`
-	PageSize int                         `json:"page_size"`
-	Code     int                         `json:"code"`
+	PageSize int32                       `json:"page_size"`
+	Code     int32                       `json:"code"`
 	Data     []*Trc20TransfersWithStatus `json:"data"`
 }
 
 type Trc20TransfersWithStatus struct {
 	Amount          string `json:"amount"`
-	Status          int    `json:"status"`
+	Status          int32  `json:"status"`
 	ApprovalAmount  string `json:"approval_amount"`
 	BlockTimestamp  int64  `json:"block_timestamp"`
-	Block           int    `json:"block"`
+	Block           int32  `json:"block"`
 	From            string `json:"from"`
 	To              string `json:"to"`
 	Hash            string `json:"hash"`
 	ContractAddress string `json:"contract_address"`
-	Confirmed       int    `json:"confirmed"`
+	Confirmed       int32  `json:"confirmed"`
 	ContractType    string `json:"contract_type"`
-	ContractType1   int    `json:"contractType"`
-	Revert          int    `json:"revert"`
+	ContractType1   int32  `json:"contractType"`
+	Revert          int32  `json:"revert"`
 	ContractRet     string `json:"contract_ret"`
 	FinalResult     string `json:"final_result"`
 	EventType       string `json:"event_type"`
 	IssueAddress    string `json:"issue_address"`
-	Decimals        int    `json:"decimals"`
+	Decimals        int32  `json:"decimals"`
 	TokenName       string `json:"token_name"`
 	Id              string `json:"id"`
-	Direction       int    `json:"direction"`
+	Direction       int32  `json:"direction"`
 }
 
 type ListAccountTokensRequest struct {
 	Address   string `json:"address"`
-	Start     int    `json:"start"`               // start index，default is 0
-	Limit     int    `json:"limit"`               // number of transfers per page
+	Start     int32  `json:"start"`               // start index，default is 0
+	Limit     int32  `json:"limit"`               // number of transfers per page
 	Token     string `json:"token"`               // Specify token ID or token address
-	Hidden    int    `json:"hidden,omitempty"`    // Whether to hide tokens with small balance. 0: hide (default) 1: show
-	Show      int    `json:"show,omitempty"`      // token type. 1: TRC20 2: TRC721 3: ALL (default) 4: TRC1155
-	SortType  int    `json:"sortType,omitempty"`  // Sort field. 1: price 2: amount (default) 3: quantity
-	SortBy    int    `json:"sortBy,omitempty"`    // Sort order. 0: descending order (default) 1: ascending order
-	AssetType int    `json:"assetType,omitempty"` // Asset type. 0: all 1: pass-through only (default) 2: credential only
+	Hidden    int32  `json:"hidden,omitempty"`    // Whether to hide tokens with small balance. 0: hide (default) 1: show
+	Show      int32  `json:"show,omitempty"`      // token type. 1: TRC20 2: TRC721 3: ALL (default) 4: TRC1155
+	SortType  int32  `json:"sortType,omitempty"`  // Sort field. 1: price 2: amount (default) 3: quantity
+	SortBy    int32  `json:"sortBy,omitempty"`    // Sort order. 0: descending order (default) 1: ascending order
+	AssetType int32  `json:"assetType,omitempty"` // Asset type. 0: all 1: pass-through only (default) 2: credential only
 }
 
 type ListAccountTokensResponse struct {
-	Total int             `json:"total"`
+	Total int32           `json:"total"`
 	Data  []*AccountToken `json:"data"`
 }
 
@@ -217,16 +217,16 @@ type AccountToken struct {
 	TokenPriceInUsd  float64 `json:"tokenPriceInUsd,omitempty"`
 	TokenName        string  `json:"tokenName"`
 	TokenAbbr        string  `json:"tokenAbbr"`
-	TokenCanShow     int     `json:"tokenCanShow"`
+	TokenCanShow     int32   `json:"tokenCanShow"`
 	TokenLogo        string  `json:"tokenLogo"`
 	TokenPriceInTrx  float64 `json:"tokenPriceInTrx,omitempty"`
 	AmountInUsd      float64 `json:"amountInUsd,omitempty"`
 	Balance          string  `json:"balance"`
-	TokenDecimal     int     `json:"tokenDecimal"`
+	TokenDecimal     int32   `json:"tokenDecimal"`
 	TokenType        string  `json:"tokenType"`
 	Vip              bool    `json:"vip"`
 	OwnerAddress     string  `json:"owner_address,omitempty"`
-	TransferCount    int     `json:"transferCount,omitempty"`
-	NrOfTokenHolders int     `json:"nrOfTokenHolders,omitempty"`
+	TransferCount    int32   `json:"transferCount,omitempty"`
+	NrOfTokenHolders int32   `json:"nrOfTokenHolders,omitempty"`
 	Project          string  `json:"project,omitempty"`
 }
