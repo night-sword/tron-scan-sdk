@@ -51,26 +51,26 @@ type GetAccountResponse struct {
 	Address            string        `json:"address"`
 	FrozenSupply       []interface{} `json:"frozen_supply"`
 	Bandwidth          struct {
-		EnergyRemaining   int32 `json:"energyRemaining"`
-		TotalEnergyLimit  int64 `json:"totalEnergyLimit"`
-		TotalEnergyWeight int64 `json:"totalEnergyWeight"`
-		NetUsed           int32 `json:"netUsed"`
-		StorageLimit      int32 `json:"storageLimit"`
-		StoragePercentage int32 `json:"storagePercentage"`
-		NetPercentage     int32 `json:"netPercentage"`
-		StorageUsed       int32 `json:"storageUsed"`
-		StorageRemaining  int32 `json:"storageRemaining"`
-		FreeNetLimit      int32 `json:"freeNetLimit"`
-		EnergyUsed        int32 `json:"energyUsed"`
-		FreeNetRemaining  int32 `json:"freeNetRemaining"`
-		NetLimit          int32 `json:"netLimit"`
-		NetRemaining      int32 `json:"netRemaining"`
-		EnergyLimit       int32 `json:"energyLimit"`
-		FreeNetUsed       int32 `json:"freeNetUsed"`
-		TotalNetWeight    int64 `json:"totalNetWeight"`
-		FreeNetPercentage int32 `json:"freeNetPercentage"`
-		EnergyPercentage  int32 `json:"energyPercentage"`
-		TotalNetLimit     int64 `json:"totalNetLimit"`
+		EnergyRemaining   int32   `json:"energyRemaining"`
+		TotalEnergyLimit  int64   `json:"totalEnergyLimit"`
+		TotalEnergyWeight int64   `json:"totalEnergyWeight"`
+		NetUsed           int32   `json:"netUsed"`
+		StorageLimit      int32   `json:"storageLimit"`
+		StoragePercentage float64 `json:"storagePercentage"`
+		NetPercentage     float64 `json:"netPercentage"`
+		StorageUsed       int32   `json:"storageUsed"`
+		StorageRemaining  int32   `json:"storageRemaining"`
+		FreeNetLimit      int32   `json:"freeNetLimit"`
+		EnergyUsed        int32   `json:"energyUsed"`
+		FreeNetRemaining  int32   `json:"freeNetRemaining"`
+		NetLimit          int32   `json:"netLimit"`
+		NetRemaining      int32   `json:"netRemaining"`
+		EnergyLimit       int32   `json:"energyLimit"`
+		FreeNetUsed       int32   `json:"freeNetUsed"`
+		TotalNetWeight    int64   `json:"totalNetWeight"`
+		FreeNetPercentage float64 `json:"freeNetPercentage"`
+		EnergyPercentage  float64 `json:"energyPercentage"`
+		TotalNetLimit     int64   `json:"totalNetLimit"`
 	} `json:"bandwidth"`
 	DateCreated int64         `json:"date_created"`
 	AccountType int32         `json:"accountType"`
