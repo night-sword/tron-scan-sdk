@@ -16,7 +16,6 @@ type GetAccountResponse struct {
 	RedTag          string `json:"redTag"`
 	PublicTag       string `json:"publicTag"`
 	WithPriceTokens []struct {
-		Amount          string  `json:"amount"`
 		TokenPriceInTrx float64 `json:"tokenPriceInTrx"`
 		TokenId         string  `json:"tokenId"`
 		Balance         string  `json:"balance"`
