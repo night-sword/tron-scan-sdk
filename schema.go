@@ -174,7 +174,7 @@ type Trc20TransfersWithStatus struct {
 	Status          int32  `json:"status"`
 	ApprovalAmount  string `json:"approval_amount"`
 	BlockTimestamp  int64  `json:"block_timestamp"`
-	Block           int32  `json:"block"`
+	Block           int64  `json:"block"`
 	From            string `json:"from"`
 	To              string `json:"to"`
 	Hash            string `json:"hash"`
