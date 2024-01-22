@@ -34,23 +34,17 @@ type GetAccountResponse struct {
 	TotalFrozen             int32 `json:"totalFrozen"`
 	Delegated               struct {
 	} `json:"delegated"`
-	TransactionsIn        int32 `json:"transactions_in"`
-	LatestOperationTime   int64 `json:"latest_operation_time"`
-	TotalTransactionCount int32 `json:"totalTransactionCount"`
-	Representative        struct {
-		LastWithDrawTime int32  `json:"lastWithDrawTime"`
-		Allowance        int32  `json:"allowance"`
-		Enabled          bool   `json:"enabled"`
-		Url              string `json:"url"`
-	} `json:"representative"`
-	FrozenForBandWidth int32         `json:"frozenForBandWidth"`
-	Announcement       string        `json:"announcement"`
-	Reward             int32         `json:"reward"`
-	AddressTagLogo     string        `json:"addressTagLogo"`
-	AllowExchange      []interface{} `json:"allowExchange"`
-	Address            string        `json:"address"`
-	FrozenSupply       []interface{} `json:"frozen_supply"`
-	Bandwidth          struct {
+	TransactionsIn        int32  `json:"transactions_in"`
+	LatestOperationTime   int64  `json:"latest_operation_time"`
+	TotalTransactionCount int32  `json:"totalTransactionCount"`
+	FrozenForBandWidth    int32  `json:"frozenForBandWidth"`
+	Announcement          string `json:"announcement"`
+	Reward                int32  `json:"reward"`
+	AddressTagLogo        string `json:"addressTagLogo"`
+	AllowExchange         any    `json:"allowExchange"`
+	Address               string `json:"address"`
+	FrozenSupply          any    `json:"frozen_supply"`
+	Bandwidth             struct {
 		EnergyRemaining   int32   `json:"energyRemaining"`
 		TotalEnergyLimit  int64   `json:"totalEnergyLimit"`
 		TotalEnergyWeight int64   `json:"totalEnergyWeight"`
@@ -72,12 +66,12 @@ type GetAccountResponse struct {
 		EnergyPercentage  float64 `json:"energyPercentage"`
 		TotalNetLimit     int64   `json:"totalNetLimit"`
 	} `json:"bandwidth"`
-	DateCreated int64         `json:"date_created"`
-	AccountType int32         `json:"accountType"`
-	Exchanges   []interface{} `json:"exchanges"`
+	DateCreated int64 `json:"date_created"`
+	AccountType int32 `json:"accountType"`
+	Exchanges   any   `json:"exchanges"`
 	Frozen      struct {
-		Total    int32         `json:"total"`
-		Balances []interface{} `json:"balances"`
+		Total    int32 `json:"total"`
+		Balances any   `json:"balances"`
 	} `json:"frozen"`
 	AccountResource struct {
 		FrozenBalanceForEnergy struct {
