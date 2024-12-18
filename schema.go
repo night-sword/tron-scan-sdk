@@ -135,13 +135,13 @@ type RiskApprove struct {
 }
 
 type ListTrc20TransfersWithStatusRequest struct {
-	Start     int64  `json:"start"`      // start index，default is 0
-	Limit     int64  `json:"limit"`      // number of transfers per page
-	Trc20Id   string `json:"trc20Id"`    // trc20 token address
-	Address   string `json:"address"`    // account address
-	Direction int64  `json:"direction"`  // transfer in or transfer out 0:all 1:transfer out 2:transfer in
-	DbVersion int64  `json:"db_version"` // return data is contains approval transfer or not. 1: contains, 0: do not contains
-	Reverse   bool   `json:"reverse"`    // sort by create time, value is true or false
+	Start     int64  `json:"start"`                // start index，default is 0
+	Limit     int64  `json:"limit"`                // number of transfers per page
+	Trc20Id   string `json:"trc20Id"`              // trc20 token address
+	Address   string `json:"address"`              // account address
+	Direction int64  `json:"direction,omitempty"`  // transfer in or transfer out 0:all 1:transfer out 2:transfer in
+	DbVersion int64  `json:"db_version,omitempty"` // return data is contains approval transfer or not. 1: contains, 0: do not contains
+	Reverse   bool   `json:"reverse,omitempty"`    // sort by create time, value is true or false
 }
 
 type ListTrc20TransfersWithStatusResponse struct {
